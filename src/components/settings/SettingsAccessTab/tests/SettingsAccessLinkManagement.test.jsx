@@ -4,7 +4,7 @@ import dayjs from 'dayjs';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 
 import LmsApiService from '../../../../data/services/LmsApiService';
@@ -24,8 +24,8 @@ jest.mock('../../../../data/services/LmsApiService', () => ({
   },
 }));
 
-jest.mock('@edx/frontend-enterprise-utils', () => {
-  const originalModule = jest.requireActual('@edx/frontend-enterprise-utils');
+jest.mock('@2uinc/frontend-enterprise-utils', () => {
+  const originalModule = jest.requireActual('@2uinc/frontend-enterprise-utils');
   return ({
     ...originalModule,
     sendEnterpriseTrackEvent: jest.fn(),

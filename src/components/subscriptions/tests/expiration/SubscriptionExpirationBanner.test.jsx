@@ -4,7 +4,7 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
-import * as enterpriseUtils from '@edx/frontend-enterprise-utils';
+import * as enterpriseUtils from '@2uinc/frontend-enterprise-utils';
 
 import SubscriptionExpirationBanner from '../../expiration/SubscriptionExpirationBanner';
 import {
@@ -18,8 +18,8 @@ import {
   TEST_ENTERPRISE_CUSTOMER_UUID,
 } from '../TestUtilities';
 
-jest.mock('@edx/frontend-enterprise-utils', () => {
-  const originalModule = jest.requireActual('@edx/frontend-enterprise-utils');
+jest.mock('@2uinc/frontend-enterprise-utils', () => {
+  const originalModule = jest.requireActual('@2uinc/frontend-enterprise-utils');
   return ({
     ...originalModule,
     sendEnterpriseTrackEvent: jest.fn(),

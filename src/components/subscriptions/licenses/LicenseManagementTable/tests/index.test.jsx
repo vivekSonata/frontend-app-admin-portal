@@ -7,7 +7,7 @@ import {
 } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import dayjs from 'dayjs';
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 
 import {
@@ -25,8 +25,8 @@ import LicenseManagerApiService from '../../../../../data/services/LicenseManage
 
 jest.useFakeTimers('modern');
 
-jest.mock('@edx/frontend-enterprise-utils', () => ({
-  ...jest.requireActual('@edx/frontend-enterprise-utils'),
+jest.mock('@2uinc/frontend-enterprise-utils', () => ({
+  ...jest.requireActual('@2uinc/frontend-enterprise-utils'),
   sendEnterpriseTrackEvent: jest.fn(),
 }));
 

@@ -7,13 +7,13 @@ import {
 import userEvent from '@testing-library/user-event';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 import '@testing-library/jest-dom/extend-expect';
 
 import EmailAddressTableCell from '../EmailAddressTableCell';
 
-jest.mock('@edx/frontend-enterprise-utils', () => ({
-  ...jest.requireActual('@edx/frontend-enterprise-utils'),
+jest.mock('@2uinc/frontend-enterprise-utils', () => ({
+  ...jest.requireActual('@2uinc/frontend-enterprise-utils'),
   sendEnterpriseTrackEvent: jest.fn(),
 }));
 

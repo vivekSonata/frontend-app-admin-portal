@@ -10,14 +10,14 @@ import { Provider } from 'react-redux';
 
 import '@testing-library/jest-dom/extend-expect';
 
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 import userEvent from '@testing-library/user-event';
 import DownloadCsvButton from '../DownloadCSVButton';
 import { downloadCsv } from '../../../utils';
 import EVENT_NAMES from '../../../eventTracking';
 
-jest.mock('@edx/frontend-enterprise-utils', () => {
-  const originalModule = jest.requireActual('@edx/frontend-enterprise-utils');
+jest.mock('@2uinc/frontend-enterprise-utils', () => {
+  const originalModule = jest.requireActual('@2uinc/frontend-enterprise-utils');
   return ({
     ...originalModule,
     sendEnterpriseTrackEvent: jest.fn(),

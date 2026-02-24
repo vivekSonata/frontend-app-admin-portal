@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 import dayjs from 'dayjs';
 import configureMockStore from 'redux-mock-store';
 import { Provider } from 'react-redux';
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import LicenseManagementTableActionColumn from '../LicenseManagementTableActionColumn';
@@ -14,8 +14,8 @@ import { ACTIVATED, ASSIGNED, REVOKED } from '../../../data/constants';
 import { SUBSCRIPTION_TABLE_EVENTS } from '../../../../../eventTracking';
 import { TEST_ENTERPRISE_CUSTOMER_UUID, TEST_SUBSCRIPTION_PLAN_UUID } from '../../../tests/TestUtilities';
 
-jest.mock('@edx/frontend-enterprise-utils', () => {
-  const originalModule = jest.requireActual('@edx/frontend-enterprise-utils');
+jest.mock('@2uinc/frontend-enterprise-utils', () => {
+  const originalModule = jest.requireActual('@2uinc/frontend-enterprise-utils');
   return ({
     ...originalModule,
     sendEnterpriseTrackEvent: jest.fn(),
