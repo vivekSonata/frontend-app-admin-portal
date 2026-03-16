@@ -6,7 +6,9 @@ const config = createConfig('jest', {
     '<rootDir>/src/setupTest.js',
   ],
 });
-config.transformIgnorePatterns = ['node_modules/(?!(lodash-es|@(open)?edx)/)'];
+config.transformIgnorePatterns = [
+  'node_modules/(?!(lodash-es|@(open)?edx|@2uinc/frontend-enterprise-logistration|@2uinc/frontend-enterprise-utils|@2uinc/frontend-enterprise-hotjar|@2uinc/frontend-enterprise-catalog-search)/)',
+];
 
 
 module.exports = config;
