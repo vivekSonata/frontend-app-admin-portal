@@ -10,14 +10,14 @@ import '@testing-library/jest-dom/extend-expect';
 
 import { IntlProvider } from '@edx/frontend-platform/i18n';
 import { logError } from '@edx/frontend-platform/logging';
-import { sendEnterpriseTrackEvent } from '@edx/frontend-enterprise-utils';
+import { sendEnterpriseTrackEvent } from '@2uinc/frontend-enterprise-utils';
 
 import DownloadAdminsCsvIconButton from '../DownloadAdminsCsvIconButton';
 import { downloadCsv } from '../../../utils';
 import EVENT_NAMES from '../../../eventTracking';
 
-jest.mock('@edx/frontend-enterprise-utils', () => {
-  const originalModule = jest.requireActual('@edx/frontend-enterprise-utils');
+jest.mock('@2uinc/frontend-enterprise-utils', () => {
+  const originalModule = jest.requireActual('@2uinc/frontend-enterprise-utils');
   return ({
     ...originalModule,
     sendEnterpriseTrackEvent: jest.fn(),
